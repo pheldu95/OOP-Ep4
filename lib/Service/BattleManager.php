@@ -1,7 +1,7 @@
 <?php
 
 //changes name of class. no longer called BattleManager. now have to use Battle\BattleManager:: to access methods and stuff
-namespace Battle;
+namespace Service;
 
 class BattleManager
 {
