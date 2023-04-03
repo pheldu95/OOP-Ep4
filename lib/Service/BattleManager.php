@@ -3,6 +3,9 @@
 //changes name of class. no longer called BattleManager. now have to use Battle\BattleManager:: to access methods and stuff
 namespace Service;
 
+use Model\BattleResult;
+use Model\AbstractShip;
+
 class BattleManager
 {
     //these are class constants. if we ever need to change these strings, we only have to do it here
