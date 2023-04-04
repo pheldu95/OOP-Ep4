@@ -121,4 +121,17 @@ abstract class AbstractShip
     {
         $this->id = $id;
     }
+
+    //gives php the abiltiy to convert an object into a string. methods like this are called "magic methods". like __construct
+    public function __toString(){
+        return $this->getName();
+    }
+
+    //supposed to avoid magic methods like __get and __set. but __toString is ok
+    /*
+    public function __get($propertyName){
+        return $this->$propertyName; //this will get a property that you call. So in battle we are doing $ship->strength. Since we have the __get function it will just return the strength for us.
+        //don't have to use getStrength, for example
+    }
+    */
 }
