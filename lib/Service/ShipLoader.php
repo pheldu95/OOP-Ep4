@@ -23,8 +23,8 @@ class ShipLoader
         //using try and catch so that if we get an exception, the page won't 'die' and show the error to the user. it will just come up with 0 ships
         try {
             $shipsData = $this->queryForShips();
-        }catch (\Exception $e){
-            trigger_error('Exception! ' . $e->getMessage());
+        }catch (\PDOException $e){
+            trigger_error('Database Exception! ' . $e->getMessage());
             $shipsData = [];
         }
         $ships = array();
